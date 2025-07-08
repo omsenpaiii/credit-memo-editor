@@ -1,0 +1,18 @@
+{
+  "name": "share-monaco",
+  "version": "0.0.1",
+  "private": "true",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "base64-js": "^1.5.1",
+    "monaco-editor": "^0.27.0",
+    "typescript": "^4.4.2",
+    "vite": "^2.5.1",
+    "y-protocols": "^1.0.5",
+    "yjs": "^13.5.12"
+  }
+}
