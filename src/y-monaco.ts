@@ -113,9 +113,10 @@ export default class monacoBinding {
               pos.lineNumber,
               pos.column
             );
-            monacoModel.applyEdits([{ range, text: op.insert as string }]);
+            const insertText = typeof op.insert === 'string' ? op.insert : '';
+            monacoModel.applyEdits([{ range, text: insertText }]);
             // monacoModel.pushEditOperations([], [{ range, text: op.insert as string }], () => null)
-            index += op.insert.length;
+            index += insertText.length;
           } else if (op.delete !== undefined) {
             const pos = monacoModel.getPositionAt(index);
             const endPos = monacoModel.getPositionAt(index + op.delete);
